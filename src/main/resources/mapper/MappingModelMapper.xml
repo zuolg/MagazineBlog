@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zlg.blog.dao.MappingModelMapper">
+  <resultMap id="BaseResultMap" type="com.zlg.blog.model.MappingModel">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="content_id" jdbcType="BIGINT" property="contentId" />
+    <result column="taxonomy_id" jdbcType="BIGINT" property="taxonomyId" />
+  </resultMap>
+</mapper>
