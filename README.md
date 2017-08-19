@@ -1,2 +1,2 @@
 # MagazineBlog
-MagazineBlog
+MagazineBlog1
