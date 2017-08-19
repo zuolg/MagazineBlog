@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zlg.blog.dao.ContentModelMapper">
+  <resultMap id="BaseResultMap" type="com.zlg.blog.model.ContentModel">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="link_to" jdbcType="VARCHAR" property="linkTo" />
+    <result column="markdown_enable" jdbcType="BIT" property="markdownEnable" />
+    <result column="thumbnail" jdbcType="VARCHAR" property="thumbnail" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="style" jdbcType="VARCHAR" property="style" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+    <result column="user_ip" jdbcType="VARCHAR" property="userIp" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="object_id" jdbcType="BIGINT" property="objectId" />
+    <result column="order_number" jdbcType="INTEGER" property="orderNumber" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="vote_up" jdbcType="INTEGER" property="voteUp" />
+    <result column="vote_down" jdbcType="INTEGER" property="voteDown" />
+    <result column="rate" jdbcType="INTEGER" property="rate" />
+    <result column="rate_count" jdbcType="INTEGER" property="rateCount" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="comment_status" jdbcType="VARCHAR" property="commentStatus" />
+    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
+    <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
+    <result column="view_count" jdbcType="INTEGER" property="viewCount" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="modified" jdbcType="TIMESTAMP" property="modified" />
+    <result column="slug" jdbcType="VARCHAR" property="slug" />
+    <result column="flag" jdbcType="VARCHAR" property="flag" />
+    <result column="lng" jdbcType="DECIMAL" property="lng" />
+    <result column="lat" jdbcType="DECIMAL" property="lat" />
+    <result column="meta_keywords" jdbcType="VARCHAR" property="metaKeywords" />
+    <result column="meta_description" jdbcType="VARCHAR" property="metaDescription" />
+    <result column="title" jdbcType="LONGVARCHAR" property="title" />
+    <result column="text" jdbcType="LONGVARCHAR" property="text" />
+    <result column="summary" jdbcType="LONGVARCHAR" property="summary" />
+    <result column="user_agent" jdbcType="LONGVARCHAR" property="userAgent" />
+    <result column="remarks" jdbcType="LONGVARCHAR" property="remarks" />
+  </resultMap>
+</mapper>
