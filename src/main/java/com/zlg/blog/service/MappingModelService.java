@@ -4,7 +4,7 @@ import com.zlg.blog.core.Service;
 
 
 /**
- * Created by ZuoLG on 2017/08/19.
+ * Created by ZuoLG on 2017/09/01.
  */
 public interface MappingModelService extends Service<MappingModel> {
 

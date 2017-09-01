@@ -10,14 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import io.swagger.annotations.ApiOperation;
+ 
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* Created by ZuoLG on 2017/08/19.
+* Created by ZuoLG on 2017/09/01.
 */
 @RestController
 @RequestMapping("/api/attachment/model")
@@ -25,35 +24,30 @@ public class AttachmentModelController {
     @Resource
     private AttachmentModelService attachmentModelService;
 
-	@ApiOperation(value="add接口信息", notes="")
     @PostMapping("/add")
     public Result add(AttachmentModel attachmentModel) {
         attachmentModelService.save(attachmentModel);
         return ResultGenerator.genSuccessResult();
     }
 
-	@ApiOperation(value="delete接口信息", notes="")
     @PostMapping("/delete")
     public Result delete(@RequestParam Integer id) {
         attachmentModelService.deleteById(id);
         return ResultGenerator.genSuccessResult();
     }
 
-	@ApiOperation(value="update接口信息", notes="")
     @PostMapping("/update")
     public Result update(AttachmentModel attachmentModel) {
         attachmentModelService.update(attachmentModel);
         return ResultGenerator.genSuccessResult();
     }
 
-	@ApiOperation(value="detail接口信息", notes="")
     @PostMapping("/detail")
     public Result detail(@RequestParam Integer id) {
         AttachmentModel attachmentModel = attachmentModelService.findById(id);
         return ResultGenerator.genSuccessResult(attachmentModel);
     }
 
-	@ApiOperation(value="list接口信息", notes="")
     @PostMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);

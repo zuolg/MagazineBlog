@@ -22,6 +22,7 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -38,7 +39,7 @@ import com.zlg.blog.core.ServiceException;
 /**
  * Spring MVC 配置
  */
-@Configuration
+@Configuration 
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
 	private final Logger logger = LoggerFactory.getLogger(WebMvcConfigurer.class);
@@ -73,8 +74,8 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 					Object handler, Exception e) {
 				//只拦截post返回json，其它请求返回错误页面
 				String method = request.getMethod();
-				if (method.equals("GET")) { 
-					ModelAndView modelAndView = new ModelAndView("error");
+				if (method.equals("GET")) {
+					ModelAndView modelAndView = new ModelAndView("404");
 					return modelAndView;
 				} else {
 					Result result = new Result();

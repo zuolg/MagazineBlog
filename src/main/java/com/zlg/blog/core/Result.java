@@ -9,6 +9,7 @@ public class Result {
     private int code;
     private String message;
     private Object data;
+    private boolean success;
 
     public Result setCode(ResultCode resultCode) {
         this.code = resultCode.code;
@@ -46,4 +47,16 @@ public class Result {
     public String toString() {
         return JSON.toJSONString(this);
     }
+
+	public boolean isSuccess() {
+		return success;
+	}
+
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+
+	
+    
+    
 }
